@@ -11,3 +11,9 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 .metadata
+.DS_Store
+RemoteSystemsTempFiles/.project
+SEF-Video-Rental-System/.classpath
+SEF-Video-Rental-System/.DS_Store
+SEF-Video-Rental-System/.project
+SEF-Video-Rental-System/.settings/org.eclipse.jdt.core.prefs
