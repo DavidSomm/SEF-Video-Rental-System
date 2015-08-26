@@ -15,6 +15,11 @@ public class Controller {
 		DB_Movie dbMovie = new DB_Movie(0, 0);
 		DB_Customer dbCustomer = new DB_Customer();
 		
+		Menu menu = new Menu();
+		menu.run();
+		menu = new CustomerMenu();
+		menu.run();
+		
 		try {
 			dbMovie = loadMovies();
 			dbCustomer = loadCustomers();

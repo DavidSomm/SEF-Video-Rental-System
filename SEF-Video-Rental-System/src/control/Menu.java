@@ -5,16 +5,25 @@ import java.util.Scanner;
 public class Menu {
 
 	Scanner keyboard = new Scanner(System.in);
+	LoanSystem loanSystem = new LoanSystem();
 	
+	public void run() {
+		printMenu();
+	}
 	
+	private void printMenu() {
+		
+		System.out.println("just menu m8 ");
+		
+		
+		
+		
+		
+	}
 	
-	
-	
-	
-	
-	
-	
-	
+	public void searchMovie() {
+		
+	}
 	
 	
 	
@@ -37,4 +46,20 @@ public class Menu {
 		
 		return number;
 	}
+	
+	
+	
+	//Used to get a string input from the user:
+	public String getCustomerID(String question) {
+		String ID = null;
+		System.out.print(question);
+		ID = keyboard.next();
+		return ID;
+	}
+	
+	
+	
+	
+	
+	
 }//end of abstract class

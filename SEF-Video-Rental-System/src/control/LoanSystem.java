@@ -3,8 +3,7 @@ package control;
 public class LoanSystem {
 
 	private int currentLoanCount = updateLoanCount();
-	
-	
+	private int lateCount;
 	
 	public LoanSystem() {
 		
@@ -25,6 +24,20 @@ public class LoanSystem {
 		
 		return 0;
 	}
+	
+	public void rentMovie() {
+		
+	}
+	public void returnMovie() {
+			
+	}
+	public void makeReservation() {
+		
+	}
+	public void checkLate() {
+		
+	}
+	
 	
 	
 	
