@@ -17,3 +17,4 @@ SEF-Video-Rental-System/.classpath
 SEF-Video-Rental-System/.DS_Store
 SEF-Video-Rental-System/.project
 SEF-Video-Rental-System/.settings/org.eclipse.jdt.core.prefs
+*.bin
