@@ -2,8 +2,10 @@ package control;
 
 import java.io.*;
 import movies.*;
+import customer.*;
 
 public class Controller {
+	
 	
 	
 	public static void main(String[] args) {
@@ -11,17 +13,19 @@ public class Controller {
 		//System.out.println("debug");
 		
 		DB_Movie dbMovie = new DB_Movie(0, 0);
+		DB_Customer dbCustomer = new DB_Customer();
 		
 		try {
 			dbMovie = loadMovies();
+			dbCustomer = loadCustomers();
 		} catch (ClassNotFoundException | IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		
 		try {
 			saveMovies(dbMovie);
+			saveCustomers(dbCustomer);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -37,13 +41,22 @@ public class Controller {
 		oos.close();
 		return temp;
 	}
-	
 	private static void saveMovies(DB_Movie movies) throws IOException {
 		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.bin"));
 		oos.writeObject(movies);
 		oos.close();
 	}
-	
+	private static DB_Customer loadCustomers() throws IOException, ClassNotFoundException {
+		ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Customers.bin"));
+		DB_Customer temp = (DB_Customer) oos.readObject();
+		oos.close();
+		return temp;
+	}
+	private static void saveCustomers(DB_Customer customers) throws IOException {
+		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Customers.bin"));
+		oos.writeObject(customers);
+		oos.close();
+	}
 	
 	
 	
